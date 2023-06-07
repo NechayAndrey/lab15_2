@@ -16,7 +16,7 @@ public class MyController {
 
     @PostMapping(value = "/feedback")
     public ResponseEntity<Response> feedback(@RequestBody Request request) {
-        log.warn(String.valueOf(request));
+        log.info(String.valueOf(request));
         Response response = Response.builder()
                 .uid(request.getUid())
                 .systemTime(request.getSystemTime())
